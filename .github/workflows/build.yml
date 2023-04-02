@@ -44,5 +44,5 @@ jobs:
         shell: powershell
         run: |
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"AlessandroGSC_InventorySystemEv" /o:"alessandrogsc" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
-          dotnet build "C:\Users\Invitados Laptop\Documents\seguridad_apps\sa_evaluation\INVENTORY_SYSTEM_IN_C_WITH_SOURCE_CODE\InventorySystem_C#\InventorySystem1.0\InventorySystem1.0.sln" --configuration Release
+          dotnet build ./InventorySystem1.0.sln
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
